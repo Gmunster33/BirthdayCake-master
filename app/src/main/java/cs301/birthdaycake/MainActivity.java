@@ -31,9 +31,15 @@ public class MainActivity extends AppCompatActivity {
         Cake = findViewById(R.id.cakeview);
         controller = new CakeController(Cake);
         GOODBYEButton = (Button) findViewById(R.id.GOODBYE);
+        GOODBYEButton.setOnClickListener(controller);
         BLOW_OUTButton = (Button) findViewById(R.id.BLOW_OUT);
+        BLOW_OUTButton.setOnClickListener(controller);
         CANDLESwitch = (Switch) findViewById(R.id.candleswitch);
         FROSTINGSwitch = (Switch) findViewById(R.id.frostingswitch);
+        //
         CANDLESeekbar = (SeekBar) findViewById(R.id.candleseekBar);
+        //
+        CANDLESeekbar.setOnSeekBarChangeListener(controller);
+
     }
 }
