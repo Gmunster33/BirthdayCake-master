@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
 
+import cs301.birthdaycake.CakeModel;
+
 public class CakeView extends SurfaceView {
 
     /* These are the paints we'll use to draw the birthday cake below */
@@ -34,17 +36,17 @@ public class CakeView extends SurfaceView {
     public static final float outerFlameRadius = 30.0f;
     public static final float innerFlameRadius = 15.0f;
 
-
-
+    private CakeModel cakeModel;
     /**
      * ctor must be overridden here as per standard Java inheritance practice.  We need it
      * anyway to initialize the member variables
      */
     public CakeView(Context context, AttributeSet attrs) {
         super(context, attrs);
-
         //This is essential or your onDraw method won't get called
         setWillNotDraw(false);
+
+        cakeModel = new CakeModel();
 
         //Setup our palette
         cakePaint.setColor(0xFFC755B5);  //violet-red
@@ -62,6 +64,10 @@ public class CakeView extends SurfaceView {
 
         setBackgroundColor(Color.WHITE);  //better than black default
 
+    }
+
+    public CakeModel getCakeModel(){
+        return cakeModel;
     }
 
     /**

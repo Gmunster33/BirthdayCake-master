@@ -54,7 +54,7 @@
                 android:text="How many candles?" />
 
             <SeekBar
-                android:id="@+id/seekBar"
+                android:id="@+id/candleseekBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:max="5"
@@ -71,14 +71,14 @@
                 android:orientation="vertical">
 
                 <Switch
-                    android:id="@+id/switch2"
+                    android:id="@+id/candleswitch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="Candles" />
 
                 <Switch
-                    android:id="@+id/switch1"
+                    android:id="@+id/frostingswitch"
                     android:layout_width="116dp"
                     android:layout_height="wrap_content"
                     android:checked="true"
@@ -91,13 +91,13 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/BLOW_OUT"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="63dp"
                     android:text="BLOW OUT" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/GOODBYE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="goodbye"
