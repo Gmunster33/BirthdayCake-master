@@ -29,6 +29,9 @@ public class CakeController
              if (id == R.id.BLOW_OUT) {
                  Log.i("BLOW_OUTButton", "BLOW_OUTButton is working!");
                  v.setBackgroundColor(Color.BLUE);
+                 cakeModel.candlesLit = false;
+                 cakeView.invalidate();
+
              }
              if (id == R.id.GOODBYE) {
 
