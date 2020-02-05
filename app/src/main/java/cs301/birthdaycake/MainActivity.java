@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         BLOW_OUTButton = (Button) findViewById(R.id.BLOW_OUT);
         BLOW_OUTButton.setOnClickListener(controller);
         CANDLESwitch = (Switch) findViewById(R.id.candleswitch);
+        CANDLESwitch.setOnCheckedChangeListener(controller);
         FROSTINGSwitch = (Switch) findViewById(R.id.frostingswitch);
-        //
+        FROSTINGSwitch.setOnCheckedChangeListener(controller);
         CANDLESeekbar = (SeekBar) findViewById(R.id.candleseekBar);
-        //
         CANDLESeekbar.setOnSeekBarChangeListener(controller);
 
     }

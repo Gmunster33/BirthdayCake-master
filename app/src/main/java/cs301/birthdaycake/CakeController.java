@@ -13,8 +13,8 @@ import android.widget.Switch;
 
 import cs301.birthdaycake.CakeView;
 
-public class CakeController
-        implements View.OnClickListener, SeekBar.OnSeekBarChangeListener {
+public class CakeController implements View.OnClickListener,
+        SeekBar.OnSeekBarChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private CakeView cakeView;
     private CakeModel cakeModel;
@@ -23,7 +23,7 @@ public class CakeController
          cakeView = view;
          cakeModel = view.getCakeModel();
      }
-
+        @Override
          public void onClick (View v){
          int id = v.getId();
              if (id == R.id.BLOW_OUT) {
@@ -47,6 +47,16 @@ public class CakeController
          public void onStopTrackingTouch (SeekBar s){
 
          }
-     }
+
+    //@Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+         int id = compoundButton.getId();
+         if (id == R.id.candleswitch){
+             cakeModel.candlesOnCake = b;
+             cakeView.invalidate();
+         }
+
+    }
+}
 
 
