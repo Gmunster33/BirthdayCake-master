@@ -39,7 +39,9 @@ public class CakeController implements View.OnClickListener,
          }
 
          public void onProgressChanged (SeekBar s,int val, boolean b){
-             cakeView.setBackgroundColor(Color.rgb(val * 10, val * 10, val * 10));
+             cakeView.setBackgroundColor(Color.rgb(val * 20, val * 10, val * 10));
+             cakeModel.numCandles=val;
+             cakeView.invalidate();
          }
          public void onStartTrackingTouch (SeekBar s){
 
